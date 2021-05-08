@@ -22,6 +22,7 @@
                 align-items: center;
                 width: 500px;
                 height: 220px;
+                margin: 16% 30%;
             }
 
 
@@ -39,6 +40,7 @@
 
             #query:focus{
                 outline: none; /*removes input border when clicked on*/
+                box-shadow: 0px 0px 5px 1px rgb(218, 218, 218);
             }
 
             #query:hover{
@@ -51,10 +53,26 @@
             }
 
             .buttons{
-                background-color: #f2f2f2
-                border: solid;
-                
+                background-color: #f2f2f2;
+                border: 1px solid #f2f2f2;
+                border-radius: 5px;
+                padding: 2% 3%;
+                width: 200px;
+                font-family: arial, sans-serif;
+                font-size: 14px;
+                color: #5F6368;
             }
+            .buttons:hover{
+                box-shadow: 0px 0px 10px 1px #d10e0e);
+            }
+
+            #buttons{
+                display: flex;
+                padding: 0 16px;
+                justify-content: space-between;
+                width: 50%;
+            }
+
         </style>
     </head>
     <body>
@@ -65,7 +83,7 @@
                     <button class="buttons" > Google Search</button>
                     <button class="buttons"> I'm Feeling Lucky</button>
                 </div>
-            
         </div>
+
     </body>
 </html>
