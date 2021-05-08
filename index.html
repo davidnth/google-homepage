@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>google homepage</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <style>
+            body{
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            /*#logo{
+                margin-top: 50%;
+                margin-right: 50%;
+            }*/
+            
+            .main{
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                width: 500px;
+                height: 220px;
+            }
+
+
+            #query{
+                width: 500px; /*remember to specify div main width which seems to be fixed on google*/
+                border-radius: 100px;
+                height: 40px;
+                border: 1px solid rgb(224, 224, 224);
+                padding-left: 30px;
+                -webkit-appearance: none; /*not sure what this is doing yet*/
+                            }
+                            /*<span class="material-icons-outlined">
+                search
+                </span> this is the code for the search icon*/
+
+            #query:focus{
+                outline: none; /*removes input border when clicked on*/
+            }
+
+            #query:hover{
+                box-shadow: 0px 0px 5px 1px rgb(218, 218, 218);
+            }
+
+                            
+            .material-icons-outlined{
+                font-family: 'Material Icons';
+            }
+
+            .buttons{
+                background-color: #f2f2f2
+                border: solid;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google Logo">
+            <input type="text" name="query" id="query">
+                <div id="buttons">
+                    <button class="buttons" > Google Search</button>
+                    <button class="buttons"> I'm Feeling Lucky</button>
+                </div>
+            
+        </div>
+    </body>
+</html>
