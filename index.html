@@ -15,6 +15,47 @@
                 margin-right: 50%;
             }*/
             
+            
+            header{
+                font-size: 13px;
+                font-family: Arial, sans-serif;
+                display: flex;
+                /*margin-left: 1%;
+                margin-right: 1%;
+                margin-top: 2%;*/
+            }
+
+            #topleft{
+                display: flex;
+                padding: 15px;
+                width: 80px;
+                justify-content: space-between;
+            }
+
+            #topright{
+                display: flex;
+                margin-left: auto;
+                margin-right: 0;
+                padding: 15px;
+                width: 200px;
+                justify-content: space-between;
+                /*float: right;*/
+            }
+
+            #signin{
+                color: white;
+                font-weight: bold;
+                background:-webkit-linear-gradient(top,#4387fd,#4683ea);
+                border: 1px solid #4285f4;
+                border-radius: 2px;
+                padding: 5px 12px;
+                
+            }
+
+            #signin:hover{
+                box-shadow: 0 2px 0 rgb(0 0 0 / 15%);
+            }
+
             .main{
                 display:flex;
                 flex-wrap: wrap;
@@ -50,40 +91,76 @@
                             
             .material-icons-outlined{
                 font-family: 'Material Icons';
+                
             }
 
             .buttons{
-                background-color: #f2f2f2;
-                border: 1px solid #f2f2f2;
+                display: flex;
+                justify-content: center;
+                background-color: #f8f8f8;
+                border: none;
                 border-radius: 5px;
-                padding: 2% 3%;
+                padding: 2%;
                 width: 200px;
                 font-family: arial, sans-serif;
                 font-size: 14px;
                 color: #5F6368;
             }
             .buttons:hover{
-                box-shadow: 0px 0px 10px 1px #d10e0e);
+                border: 1px solid #c6c6c6;
+                box-shadow: 0px 1px 1px rgb(0 0 0 / 10%);
             }
 
             #buttons{
                 display: flex;
-                padding: 0 16px;
-                justify-content: space-between;
-                width: 50%;
+                padding: 10px 10px;
+                /*justify-content: center;*/
+                width: 55%;
+            }
+
+            a{
+                text-decoration: none;
+                color: #000;
+                opacity: 0.75;
+            }
+
+            a:visited{
+                text-decoration: none;
+            }
+
+            a:hover{
+                text-decoration:underline;
             }
 
         </style>
     </head>
     <body>
+        <header>
+            <div id="topleft">
+                <a href="">About</a>
+                <a href="">Store</a>
+            </div>
+            <div id="topright">
+                <a href="">Gmail</a>
+                <a href="">Images</a>
+                <a href=""><span class="material-icons-outlined">
+                    apps
+                    </span></a>
+                <a href=""><button id="signin">Sign in</button></a>
+            </div>
+
+        </header>
         <div class="main">
             <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google Logo">
             <input type="text" name="query" id="query">
-                <div id="buttons">
-                    <button class="buttons" > Google Search</button>
-                    <button class="buttons"> I'm Feeling Lucky</button>
-                </div>
+            <div id="buttons">
+                <input type="submit" for="query" class="buttons" value="Google Search"></input>
+                <input type="submit" for="query" class="buttons" value="I'm Feeling Lucky"></input>
+            </div>
         </div>
+        <footer>
+            
+        </footer>
 
     </body>
 </html>
