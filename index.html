@@ -8,12 +8,20 @@
         <style>
             body{
                 max-width: 100%;
-                overflow-x: hidden;
+                max-height: 100%;
+                /*overflow-x: auto;*/
+                overflow-y: hidden;
             }
             /*#logo{
                 margin-top: 50%;
                 margin-right: 50%;
             }*/
+
+            @media only screen and (max-width: 980px) {
+                body {
+                    overflow-x: auto;
+                }
+            }
             
             
             header{
@@ -60,25 +68,29 @@
                 display:flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                align-items: center;
-                width: 500px;
-                height: 220px;
+                /*align-content: space-between;*/
+                width: 50%;
+                height: 30%;
                 margin: 16% 30%;
+            }
+
+            #logo{
+                padding-bottom: 5%;
             }
 
 
             #query{
-                width: 500px; /*remember to specify div main width which seems to be fixed on google*/
-                border-radius: 100px;
-                height: 40px;
+                width: 100%; /*remember to specify div main width which seems to be fixed on google*/
+                border-radius: 999px;
+                height: 15%;
                 border: 1px solid rgb(224, 224, 224);
-                padding-left: 30px;
+                padding: 3% 10% 3% 10%;
                 -webkit-appearance: none; /*not sure what this is doing yet*/
-                            }
+                            
                             /*<span class="material-icons-outlined">
                 search
                 </span> this is the code for the search icon*/
-
+                background-image: url(/home/master/the_odin_project/google-homepage/icons/mic_black_24dp.svg);}
             #query:focus{
                 outline: none; /*removes input border when clicked on*/
                 box-shadow: 0px 0px 5px 1px rgb(218, 218, 218);
@@ -94,14 +106,42 @@
                 
             }
 
-            .buttons{
+            .HPVvwb{
+                background: url('//web.archive.org/web/20191130234759im_/https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png') 0 0 no-repeat;
+                height: 24px;
+                width: 24px;
+                background-size: 24px;
+                vertical-align: middle;
+            }
+
+            #search{
+                position: relative;
+                right: 43%;
+                bottom: 65%;
+
+
+            }
+
+            #mic{
+
+            }
+
+            #buttons{ /*this is the DIV*/
                 display: flex;
+                padding: 6% 20%; /*padding OF div*/
+                justify-content: space-between;
+                /*justify-content: center;*/
+                width: 60%;
+            }
+
+            .buttons{ /*Each button inside the DIV*/
+                display: flex;
+                width: 15%;
                 justify-content: center;
                 background-color: #f8f8f8;
                 border: none;
                 border-radius: 5px;
-                padding: 2%;
-                width: 200px;
+                padding: 3% 24%; /*padding of word inside buttons*/
                 font-family: arial, sans-serif;
                 font-size: 14px;
                 color: #5F6368;
@@ -111,12 +151,6 @@
                 box-shadow: 0px 1px 1px rgb(0 0 0 / 10%);
             }
 
-            #buttons{
-                display: flex;
-                padding: 10px 10px;
-                /*justify-content: center;*/
-                width: 55%;
-            }
 
             a{
                 text-decoration: none;
@@ -153,6 +187,12 @@
         <div class="main">
             <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google Logo">
             <input type="text" name="query" id="query">
+                    <span id="search" class="material-icons-outlined">
+                        search
+                    </span>
+                    <label for="query">
+                    <span id="mic" class="HPVvwb"></span>
+                    </label>
             <div id="buttons">
                 <input type="submit" for="query" class="buttons" value="Google Search"></input>
                 <input type="submit" for="query" class="buttons" value="I'm Feeling Lucky"></input>
