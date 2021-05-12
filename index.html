@@ -18,59 +18,75 @@
                 margin-right: 50%;
             }*/
 
-            @media only screen and (max-width: 980px) {
+            /*@media only screen and (max-width: 980px) {
                 body {
                     overflow-x: auto;
                 }
-            }
+            }*/
             
             
-            header{
+            /*header{
                 font-family: Arial, sans-serif;
                 display: flex;
                 /*margin-left: 1%;
                 margin-right: 1%;
-                margin-top: 2%;*/
+                margin-top: 2%;
+            }*/
+           
+            .nav{
+                display: inline;         
+                }
+
+            li{
+                display: inline;
+                list-style-type: none;
+                padding: 5px 5px;
+                text-decoration: none;
+                color: #000;
             }
 
-            #topleft{
-                display: flex;
-                padding: 15px;
-                width: 80px;
-                justify-content: space-between;
+
+            .topleft{
+                display: inline;
+                float: left;
+                padding: 5px;
+                margin-top: 15px;
+                margin-left: 15px;
             }
 
-            #topright{
-                display: flex;
-                margin-left: auto;
-                margin-right: 0;
-                padding: 15px;
-                width: 200px;
-                justify-content: space-between;
-                /*float: right;*/
+            .topright{
+                display: inline;
+                float: right;
+                padding: 3px;
+                margin-top: 15px;
+                margin-right: 10px;
+            }
+
+            #apps{
+                font-size: 24px;
+                margin-top: 10px;
             }
 
             #signin{
                 color: white;
                 font-weight: bold;
-                background:-webkit-linear-gradient(top,#4387fd,#4683ea);
+                background-color: #1266f8;
                 border: 1px solid #4285f4;
                 border-radius: 2px;
-                padding: 5px 12px;
+                padding: 7px 14px;
+                margin-right: 15px;
                 
             }
 
             #signin:hover{
                 box-shadow: 0 2px 0 rgb(0 0 0 / 15%);
+                text-decoration: none;
             }
 
-            .main{
+            .center{
                 display:flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                /*align-content: space-between;*/
-                /*width: 50%;
-                height: 30%;*/
                 margin: auto;
                 margin-top: 190px;
                 max-width: 584px;
@@ -88,10 +104,6 @@
                 border: 1px solid rgb(224, 224, 224);
                 padding: 17px 10px 17px 45px;
                 -webkit-appearance: none; /*not sure what this is doing yet*/
-                            
-                            /*<span class="material-icons-outlined">
-                search
-                </span> this is the code for the search icon*/
                 background-image: url('../icons/search_black_24dp.svg'), url('../icons/mic_black_24dp.svg');
                 background-repeat: no-repeat, no-repeat;
                 background-position: 2% 50%, 98% 50%;
@@ -110,26 +122,6 @@
             .material-icons-outlined{
                 font-family: 'Material Icons';
                 
-            }
-
-            .HPVvwb{
-                background: url('//web.archive.org/web/20191130234759im_/https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png') 0 0 no-repeat;
-                height: 24px;
-                width: 24px;
-                background-size: 24px;
-                vertical-align: middle;
-            }
-
-            #search{
-                position: relative;
-                right: 43%;
-                bottom: 65%;
-
-
-            }
-
-            #mic{
-
             }
 
             #buttons{ /*this is the DIV*/
@@ -171,29 +163,55 @@
                 text-decoration:underline;
             }
 
+            footer{
+                display: inline;
+                background-color: grey;
+                margin: 0;
+                padding: 0;
+                position: fixed;
+                bottom: 0;
+            }
+
+            .bottomleft{
+                display: inline;
+                float: left;
+                padding: 0 px 10px 0px 10px;
+            }
+
+            .bottomright{
+                display: inline;
+                float: right;
+                padding:
+            }
+
         </style>
     </head>
     <body>
         <header>
-            <div id="topleft">
-                <a href="">About</a>
-                <a href="">Store</a>
-            </div>
-            <div id="topright">
-                <a href="">Gmail</a>
-                <a href="">Images</a>
-                <a href=""><span class="material-icons-outlined">
-                    apps
-                    </span></a>
-                <a href=""><button id="signin">Sign in</button></a>
-            </div>
-
+            <ul class="nav">
+                <li class="topleft"><a href="">About</a></li>
+                <li class="topleft"><a href="">Store</a></li>
+                <li class="topright"><a href="" id="signin">Sign in</a></li>
+                <li id="apps" class="topright"><a href=""><span class="material-icons-outlined">
+                    apps</span></a></li><li class="topright"><a href="">Images</a></li>
+                <li class="topright"><a href="">Gmail</a></li>
+                    <!--The order of elements is reversed when floated to the right, thus I've reversed the order of the elements in HTML-->
+                
+                
+            </ul>
+            <!--<ul id="topright">
+                <li><a href="">Gmail</a></li>
+                <li><a href="">Images</a></li>
+                <li><a href=""><span class="material-icons-outlined">
+                    apps</span></a></li>
+                <li><a href="" id="signin">Sign in</a></li>
+            </ul>-->
         </header>
-        <div class="main">
+        <br> <!-- without the break, nav becomes inline with the next div-->
+        <div class="center">
             <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="The Google Logo">
             <input type="text" name="query" id="query" class="query">
                     <label for="query">
-                    <span id="mic" class="HPVvwb"></span>
                     </label>
             <div id="buttons">
                 <input type="submit" for="query" class="buttons" value="Google Search"></input>
@@ -201,7 +219,14 @@
             </div>
         </div>
         <footer>
-            
+            <ul>
+                <li><a href="" class="bottomleft">Advertising</a></li>
+                <li><a href="" class="bottomleft">Business</a></li>
+                <li><a href="" class="bottomleft">How Search Works</a></li>
+                <li><a href="" class="bottomright">Settings</a></li>
+                <li><a href="" class="bottomright">Terms</a></li>
+                <li><a href="" class="bottomright">Privacy</a></li>
+            </ul>
         </footer>
 
     </body>
